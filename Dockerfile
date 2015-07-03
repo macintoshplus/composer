@@ -1,6 +1,9 @@
 FROM        	macintoshplus/php56:latest
 MAINTAINER 	Jean-Baptiste Nahan <jean-baptiste@nahan.fr>
 
+RUN 		echo 'deb http://httpredir.debian.org/debian jessie-backports main' > /etc/apt/sources.list.d/jessie-backports.list
+RUN		apt-get update && apt-get -y upgrade
+
 ENV 		JAVA_VERSION 8u45
 ENV 		JAVA_DEBIAN_VERSION 8u45-b14-2~bpo8+2
 ENV 		CA_CERTIFICATES_JAVA_VERSION 20140324
