@@ -4,8 +4,8 @@ MAINTAINER 	Jean-Baptiste Nahan <jean-baptiste@nahan.fr>
 RUN 		echo 'deb http://httpredir.debian.org/debian jessie-backports main' > /etc/apt/sources.list.d/jessie-backports.list
 RUN		apt-get update && apt-get -y upgrade
 
-ENV 		JAVA_VERSION 8u45
-ENV 		JAVA_DEBIAN_VERSION 8u45-b14-2~bpo8+2
+ENV 		JAVA_VERSION 8u66
+ENV 		JAVA_DEBIAN_VERSION 8u66-b01-1~bpo8+1
 ENV 		CA_CERTIFICATES_JAVA_VERSION 20140324
 RUN		apt-get install -y openjdk-8-jre-headless="$JAVA_DEBIAN_VERSION" ca-certificates-java="$CA_CERTIFICATES_JAVA_VERSION"
 RUN 		/var/lib/dpkg/info/ca-certificates-java.postinst configure
