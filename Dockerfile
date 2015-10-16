@@ -13,5 +13,6 @@ RUN 		ln -s /usr/bin/java /bin/java
 
 RUN 		wget -O /usr/local/bin/composer -q http://getcomposer.org/composer.phar
 RUN 		chmod +x /usr/local/bin/composer
+RUN 		chmod 777 /root
 
 WORKDIR /src
