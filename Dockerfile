@@ -5,7 +5,7 @@ RUN 		echo 'deb http://httpredir.debian.org/debian jessie-backports main' > /etc
 RUN		apt-get update && apt-get -y upgrade
 
 ENV 		JAVA_VERSION 8u91
-ENV 		JAVA_DEBIAN_VERSION 8u72-b15-1~bpo8+1
+ENV 		JAVA_DEBIAN_VERSION 8u91-b14-1~bpo8+1
 ENV 		CA_CERTIFICATES_JAVA_VERSION 20140324
 RUN		apt-get install -y openjdk-8-jre-headless="$JAVA_DEBIAN_VERSION" ca-certificates-java="$CA_CERTIFICATES_JAVA_VERSION"
 RUN 		/var/lib/dpkg/info/ca-certificates-java.postinst configure
