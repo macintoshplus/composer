@@ -6,7 +6,7 @@ RUN		apt-get update && apt-get -y upgrade
 
 ENV 		JAVA_VERSION 8u121
 ENV 		JAVA_DEBIAN_VERSION 8u121-b13-1~bpo8+1
-ENV 		CA_CERTIFICATES_JAVA_VERSION 20161107
+ENV 		CA_CERTIFICATES_JAVA_VERSION 20161107~bpo8+1
 RUN		apt-get install -y openjdk-8-jre-headless="$JAVA_DEBIAN_VERSION" ca-certificates-java="$CA_CERTIFICATES_JAVA_VERSION"
 RUN 		/var/lib/dpkg/info/ca-certificates-java.postinst configure
 RUN 		ln -s /usr/bin/java /bin/java
